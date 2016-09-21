@@ -30,7 +30,6 @@ public abstract class BaseActivity extends FragmentActivity {
         super.setContentView(R.layout.base_activity_layout);
         _initViews();
         addContentView(getLayoutInflater().inflate(layoutResID, null, false));
-
     }
 
     protected abstract void initView();
@@ -40,7 +39,6 @@ public abstract class BaseActivity extends FragmentActivity {
         super.setContentView(R.layout.base_activity_layout);
         _initViews();
         addContentView(view);
-
     }
 
     protected void _initViews() {
