@@ -1,19 +1,5 @@
 apply plugin: 'com.android.application'
 
-def loadProperties() {
-    def proFile = file("../local.properties")
-    Properties p = new Properties()
-    proFile.withInputStream { stream->
-        p.load(stream)
-    }
-    appReleaseDir = p.appReleaseDir
-//    appVersionCode = Integer.valueOf(p.appVersionCode)
-//    appVersionName = p.appVersionName
-}
-
-
-loadProperties()
-
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
