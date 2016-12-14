@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="left"
+            android:text="@string/left"
             />
 
         <TextView
@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="title"
+            android:text="@string/title"
             />
 
         <Button
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="left"
+            android:text="@string/left"
             />
 
     </RelativeLayout>
