@@ -24,7 +24,6 @@ android {
         }
     }
     allprojects {
-
         gradle.projectsEvaluated {
             tasks.withType(JavaCompile) {
                 options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
@@ -44,14 +43,14 @@ android {
                 timeNow = JENKINS_TIME
                 outDirectory = 'D:\\ui\\apk'
                 newName = 'yj-android-v' +
-                        APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+                        APP_VERSION + '-' + timeNow + '-' + '.apk'
             } else {
                 timeNow = getDate()
                 if (variant.buildType.name.equals('debug')) {
-                    newName = "yj-android-v${APP_VERSION}-debug.apk"
+                    newName = "zql-v${APP_VERSION}-debug.apk"
                 } else {
-                    newName = 'yj-android-v' +
-                            APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+                    newName = 'zql-v' +
+                            APP_VERSION + '-'  + timeNow + '-' + '.apk'
                 }
             }
 
