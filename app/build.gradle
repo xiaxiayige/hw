@@ -25,6 +25,34 @@ android {
             }
         }
     }
+
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def newName
+            def timeNow
+            def oldFile = output.outputFile
+            def outDirectory = oldFile.parent
+
+            if ("true".equals(IS_JENKINS)) {
+                timeNow = JENKINS_TIME
+                outDirectory = 'D:\\ui\\apk'
+                newName = 'yj-android-v' +
+                        APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+            } else {
+                timeNow = getDate()
+                if (variant.buildType.name.equals('debug')) {
+                    newName = "yj-android-v${APP_VERSION}-debug.apk"
+                } else {
+                    newName = 'yj-android-v' +
+                            APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+                }
+            }
+
+            output.outputFile = new File(outDirectory, newName)
+
+        }
+    }
 }
 
 dependencies {
