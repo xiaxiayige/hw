@@ -15,7 +15,7 @@ import com.hw.main.ZHFragment;
 
 public class MainActivity extends FragmentActivity {
     private FragmentTabHost mFragmentTabHost;
-    private String[] tabNames = {"吃", "住", "行", "我的"};
+    private String[] tabNames = {"吃好", "住好", "行好", "我的"};
     private Class[] fragments = {CHFragment.class, ZHFragment.class, XHFragment.class, MyFragment.class};
     private int[] tabIco = {R.drawable.tab_eat, R.drawable.tab_zhu, R.drawable.work, R.drawable.my};
 
@@ -45,5 +45,5 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-   
+
 }
