@@ -24,14 +24,12 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/tabs"
                 />
             
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#cccccc"
-                android:layout_above="@+id/tabs"
                 ></View>
 
             <TabWidget
